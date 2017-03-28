@@ -1,9 +1,8 @@
 # Summary
 
+* [Introduction](README.md)
 * [First Chapter](chapter1.md)
-* [java](/java)
+* [java](java)
 * spring
 * tomcat
-
-
 
