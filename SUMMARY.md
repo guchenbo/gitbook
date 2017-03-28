@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [java](java/README.md)
-  * [自动动手写Java虚拟机](《自己动手写Java虚拟机》读书总结.md)
+  * [自动动手写Java虚拟机](java/《自己动手写Java虚拟机》读书总结.md)
 * [spring](spring/README.md)
   * [Schema机制](spring/spring schema 机制.md)
   * [MVC](spring/Spring之MVC.md)
