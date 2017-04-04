@@ -1,4 +1,4 @@
-# Maven之settings.xml详解
+# Maven之setting.xml
 ### 概述
 maven的配置文件就一个setting.xml，本文详细分析setting.xml中每个元素的定义。
 
@@ -218,4 +218,5 @@ plugin的groupId列表，子元素是`pluginGroup`。如果构建的时候没有
 ### activeProfiles
 配置profileId的列表，配置在这个元素中的profileId都会被激活
 ==注：profile激活的条件，1、-P参数；2、`<profile><activation>`元素；3、`<activeProfiles>元素`==
+
 
