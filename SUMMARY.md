@@ -12,7 +12,13 @@
     * [容器生命周期](tomcat/Tomcat之请求处理流程.md)
     * [请求处理流程](tomcat/Tomcat之容器生命周期.md)
 * [maven](maven/README.md)
-    * [Maven之settings.xml详解](maven/settings.xml.md)
-    * [Maven之仓库详解](maven/repository.md)
-    * [Maven之常用镜像列表](maven/mirror-list.md)
+    * [基础](maven/basic/README.md)
+        * [Maven之settings.xml详解](maven/basic/settings.xml.md)
+        * [Maven之仓库详解](maven/basic/repository.md)
+        * [Maven之常用镜像列表](maven/basic/mirror-list.md)
+    * [插件](maven/plugin/README.md)
+        * [dependency plugin的一般使用方法](denpendency-plugin.md)
+    * [命令](maven/command/README.md)
+        * [安装本地jar](install-local-jar.md)
+
 
