@@ -29,14 +29,24 @@ maven管理的依赖包，都放在仓库中。构建maven项目时，仓库分�
 	</repository>
 </repositories>
 ```
-自定义可以有几种配置方式：
+远程仓库可以有几种配置方式：
 
 * settings.xml的profile
 * pom.xml的repository
-* settings.xml的mirror
 
 ==注：优先级：repository > profile==
 #### mirror
-作为仓库的镜像，会替代需要镜像的仓库
+作为另一种配置方式，作为仓库的镜像，会替代需要镜像的仓库
+
+```
+<mirrors>
+    <mirror>
+     <id>alimaven</id>
+     <name>aliyun maven</name>
+     <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+     <mirrorOf>central</mirrorOf>        
+    </mirror>
+</mirrors>
+```
 
 
