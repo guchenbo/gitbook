@@ -17,7 +17,8 @@
         * [Maven之仓库详解](maven/basic/repository.md)
         * [Maven之常用镜像列表](maven/basic/mirror-list.md)
     * [插件](maven/plugin/README.md)
-        * [dependency plugin的一般使用方法](denpendency-plugin.md)
+        * [dependency plugin的一般使用方法](maven/plugin/denpendency-plugin.md)
+        * [导出可执行jar，然后生成exe安装包](maven/plugin/shade-plugin.md)
     * [命令](maven/command/README.md)
-        * [安装本地jar](install-local-jar.md)
+        * [安装本地jar](maven/command/install-local-jar.md)
 
