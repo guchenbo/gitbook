@@ -14,4 +14,5 @@
 * [maven](maven/README.md)
     * [Maven之settings.xml详解](maven/settings.xml.md)
     * [Maven之仓库详解](maven/repository.md)
+    * [Maven之常用镜像列表](maven/mirror-list.md)
 
