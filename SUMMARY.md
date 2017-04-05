@@ -21,4 +21,5 @@
         * [导出可执行jar，然后生成exe安装包](maven/plugin/shade-plugin.md)
     * [命令](maven/command/README.md)
         * [安装本地jar](maven/command/install-local-jar.md)
+        * [junit 使用profile](maven/command/junit-profile.md)
 
