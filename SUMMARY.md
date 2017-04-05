@@ -21,4 +21,3 @@
     * [命令](maven/command/README.md)
         * [安装本地jar](install-local-jar.md)
 
-
