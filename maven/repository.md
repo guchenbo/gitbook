@@ -34,7 +34,7 @@ maven管理的依赖包，都放在仓库中。构建maven项目时，仓库分�
 * settings.xml的profile
 * pom.xml的repository
 
-==注：优先级：repository > profile==
+==注：优先级：profile > 项目pom的repository > super pom的repository==
 #### mirror
 作为另一种配置方式，作为仓库的镜像，会替代需要镜像的仓库
 
