@@ -1,0 +1,3 @@
+foreach语句初解
+
+发现只要对象里有iterator()，就能使用foreach语句迭代对象
