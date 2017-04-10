@@ -26,4 +26,6 @@
     * [命令](maven/command/README.md)
         * [安装本地jar](maven/command/install-local-jar.md)
         * [junit 使用profile](maven/command/junit-profile.md)
+* [mysql](mysql/README.md)
+    * [mysql之索引](mysql/mysql-index.md)
 
