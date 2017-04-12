@@ -29,6 +29,7 @@
 * [mysql](mysql/README.md)
     * [Mysql几点](mysql/mysql-bscis.md)
     * [Mysql之索引](mysql/mysql-index.md)
+    * [Sql语句模板](mysql/sql-template.md)
 * [oracle](oracle/README.md)
     * [Oracle几点](mysql/oracle-bscis.md)
 * [orm](orm/README.md)
