@@ -41,7 +41,4 @@
         * [Struts2之启动过程](framework/struts/startup.md)
         * [Struts2之action 映射](framework/struts/action-mapping.md)
         * [Struts2之convention plugin](framework/struts/convention-plugin.md)
-        
-
-
 
