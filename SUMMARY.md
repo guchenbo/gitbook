@@ -28,4 +28,11 @@
         * [junit 使用profile](maven/command/junit-profile.md)
 * [mysql](mysql/README.md)
     * [Mysql之索引](mysql/mysql-index.md)
+* [oracle](oracle/README.md)
+* [orm](orm/README.md)
+    * [mybatis](orm/mybatis/README.md)
+        * [Mybatis几点](orm/mybatis/basic.md)
+    * [hibernate](orm/hibernate/README.md)
+        * [Hibernate hbm2ddl特性](orm/hibernate/hbm2ddl.md)
+* [framework](framework/README.md)
 
