@@ -15,14 +15,22 @@ spring mvc启动第二步，启动IOC容器，并且将根IOC容器作为父容�
 
 ### HandlerMapping
 Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping`
+#### AbstractHandlerMapping
+`AbstractHandlerMapping`实现`HandlerMapping`，间接实现`ApplicationContextAware`，是所有HandlerMapping的抽象父类，有两个重要的方法：
 
-`AbstractHandlerMapping`实现`HandlerMapping`，间接实现`ApplicationContextAware`，是所有HandlerMapping的抽象父类
+* initApplicationContext()
+* getHandler(HttpServletRequest)
 
-`DispatcherServlet`在创建`HandlerMapping`实例的等同于创建一个`HandlerMapping`的bean
+==注：`DispatcherServlet`在创建`HandlerMapping`实例的等同于创建一个`HandlerMapping`的bean==
 
-创建`HandlerMapping`bean的时候，会入口`setApplicationContext()`，子类会初始化拦截器列表，方法是将`HandlerInterceptor`列表，使用适配器模式封装成`HandlerInterceptorAdapter`列表
+##### initApplicationContext
+创建`HandlerMapping`类型的bean的时候，会入口`setApplicationContext()`，该方法里面会调用`initApplicationContext()`
 
-getHandler()，从handlerMap中根据url获取handler，也就是Controller的bean，通过Controller对象，找到具体执行的方法，封装成`ServletHandlerMethodInvoker`
+* 初始化拦截器列表，将`HandlerInterceptor`列表，使用适配器模式封装成`HandlerInterceptorAdapter`列表
+* 或者注册handlerMap或者其他自定义行为
+
+##### getHandler
+从handlerMap中根据url获取handler，也就是Controller的bean，通过Controller对象，找到具体执行的方法，封装成`ServletHandlerMethodInvoker`
 创建`HandlerMapping`的bean时，会注册handlerMap
 #### 模板模式
 父类空方法，交由子类实现
