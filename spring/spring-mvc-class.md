@@ -21,7 +21,8 @@ Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping`
 * initApplicationContext()
 * getHandler(HttpServletRequest)
 
-==注：`DispatcherServlet`在创建`HandlerMapping`实例的等同于创建一个`HandlerMapping`的bean==
+==注：DispatcherServlet在创建HandlerMapping实例的等同于创建一个HandlerMapping类型的bean==
+==注：这里ApplicationContextAware设置的ioc是web的ioc，不是root的ioc==
 
 ##### initApplicationContext
 创建`HandlerMapping`类型的bean的时候，会入口`setApplicationContext()`，该方法里面会调用`initApplicationContext()`
