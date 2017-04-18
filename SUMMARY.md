@@ -9,10 +9,12 @@
     * [线程](java/thread/README.md)
 * [spring](spring/README.md)
     * [Schema机制](spring/spring schema 机制.md)
-    * [MVC](spring/Spring之MVC.md)
+    * [MVC](spring/mvc/README.md)
+        * [Spring MVC之DispatcherServlet处理请求的过程](spring/mvc/DispatcherServlet-handler.md)
     * [定时任务](spring/Spring中的定时任务.md)
     * [Spring MVC重要的接口和类解析](spring/spring-mvc-class.md)
     * [Spring中重要的类](spring/spring-class.md)
+
 * [tomcat](tomcat/README.md)
     * [配置相关信息](tomcat/config.md)
     * [容器生命周期](tomcat/Tomcat之请求处理流程.md)
