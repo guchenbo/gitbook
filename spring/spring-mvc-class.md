@@ -14,7 +14,8 @@ spring mvc启动第二步，启动IOC容器，并且将根IOC容器作为父容�
 3. `onRefresh()`初始化各个组件，如果没有配置组件，就用默认实现，在`DispatcherServlet.properties`文件中定义了组件的默认实现；
 
 ### HandlerMapping
-Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping`
+Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping（过期）`，配置`<mvc:annotation-driven />`注册`RequestMappingHandlerMapping`、`RequestMappingHandlerAdapter
+`对应`@RequestMapping`。
 #### AbstractHandlerMapping
 `AbstractHandlerMapping`实现`HandlerMapping`，间接实现`ApplicationContextAware`，是所有HandlerMapping的抽象父类，有两个重要的方法：
 
@@ -33,6 +34,26 @@ Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping`
 ##### getHandler
 从handlerMap中根据url获取handler，也就是Controller的bean，通过Controller对象，找到具体执行的方法，封装成`ServletHandlerMethodInvoker`
 创建`HandlerMapping`的bean时，会注册handlerMap
+
+### RequestMappingHandlerMapping
+Spring3.1之后主要的HandlerMapping，替换过期的`DefaultAnnotationHandlerMapping`，间接实现`InitializingBean`，主要的方法是：
+
+* initHandlerMethods
+* getHandler
+
+#### initHandlerMethods
+
+1. 扫描ioc容器的所有bean，对有`@RequestMapping`或者`@Controller`的bean做处理
+2. 对有`@RequestMapping`的方法，封装为`HandlerMethod`，注册到相应Map中
+
+#### getHandler
+根据url，获取HandlerMethod封装成
+
+1. 根据url，到相应的Map中查找HandlerMethod
+2. 将HandlerMethod封装成HandlerExecutionChain对象，并且加入适配的拦截器
+
+==注：查找HandlerMethod过程，会根据`@RequestMapping`注解的各个属性有优先级的查询，详见RequestCondition==
+
 #### 模板模式
 父类空方法，交由子类实现
 #### 适配器模式
