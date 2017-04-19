@@ -1,17 +1,27 @@
 # Spring MVC重要的接口和类解析
 ### ContextLoaderListener
-spring mvc启动的第一步，启动根IOC容器并且放入`ServletContext`。
+spring mvc启动的第一步，启动ROOT IOC容器并且放入`ServletContext`。
 
-1. 实例化`XmlWebApplicationContext`类（默认的，可以自定义）；
-2. 加载`WEB-INF/applicationContext.xml`（默认的，可以自定义），(`applicationContext.setConfigLocation()`)加载bean配置，来启动Spring IOC容器；
-3. 把这个作为根IOC容器放入`ServletContext`中；
+1. 实例化`WebApplicationContext`的实现类；
+2. 加载`contextConfigLocation`配置的`applicationContext.xml`文件(`applicationContext.setConfigLocation()`)加载bean配置，来启动Spring IOC容器；
+3. 把这个作为ROOT IOC容器放入`ServletContext`中；
+
+==注：
+1. WebApplicationContext的实现类，可以通过配置contextClass进行指定，ContextLoader.properties文件指定了默认实现，为XmlWebApplicationContext
+2. XmlWebApplicationContext里定义了默认路径，为WEB-INF/applicationContext.xml==
+
 
 ### DispacherServlet
-spring mvc启动第二步，启动IOC容器，并且将根IOC容器作为父容器。
+spring mvc启动第二步，启动WEB IOC容器，并且将ROOT IOC容器作为父容器。
 
-1. 实例化`XmlWebApplicationContext`类（默认的，可以自定义）；
+1. 实例化`WebApplicationContext`的实现类；
 2. 加载`contextConfigLocation`配置的`applicationContext.xml`文件，(`applicationContext.setConfigLocation()`)加载bean配置，来启动Spring IOC容器；
 3. `onRefresh()`初始化各个组件，如果没有配置组件，就用默认实现，在`DispatcherServlet.properties`文件中定义了组件的默认实现；
+
+==注：
+1.WebApplicationContext的实现类，可以通过配置contextClass进行指定，FrameworkServlet类指定了默认实现，为XmlWebApplicationContext
+2. XmlWebApplicationContext指定了默认路径为方法getDefaultConfigLocations()==
+
 
 ### HandlerMapping
 Spring MVC默认有`BeanNameUrlHandlerMapping、DefaultAnnotationHandlerMapping（过期）`，配置`<mvc:annotation-driven />`注册`RequestMappingHandlerMapping`、`RequestMappingHandlerAdapter
