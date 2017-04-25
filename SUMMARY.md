@@ -8,6 +8,7 @@
     * [IO](java/io/README.md)
     * [集合](java/collection/README.md)
     * [线程](java/thread/README.md)
+    * [JVM](java/jvm/README.md)
 * [spring](spring/README.md)
     * [基础](spring/basic/README.md)
         * [Spring中重要的类](spring/basic/spring-class.md)
