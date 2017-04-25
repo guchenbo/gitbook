@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [java](java/README.md)
-    * [自动动手写Java虚拟机](java/《自己动手写Java虚拟机》读书总结.md)
     * [基础](java/basic/README.md)
         * [对象排序](java/basic/compare.md)
     * [IO](java/io/README.md)
