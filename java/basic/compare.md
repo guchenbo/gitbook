@@ -1,5 +1,5 @@
 # 对象排序
-java处理对象排序的，可以使用排序器接口：
+java处理对象排序的，可以使用排序器接口2：
 
 * Comparable
 * Comparator
