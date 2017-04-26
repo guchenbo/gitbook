@@ -1,6 +1,6 @@
 # Srping MVC之类型转换方式
-spring mvc中类型转换的方式有：PropertyEditor、ConvertService
-
+spring mvc中类型转换的方式有：PropertyEditor、ConversionService
+==注：如果有自定义PropertyEditor，会优先使用PropertyEditor，否则就用默认的ConversionService==
 ### PropertyEditor
 spring 3.0之前使用方式，通过扩展j2se的PropertyEditor属性编辑器。
 ==注：PropertyEditor方式，每次解析一个参数都会注册自定义的属性编辑器，是个缺点==
@@ -43,6 +43,34 @@ Controller级别的自定义属性编辑器，示例：
 
 ```
 
+==注：同类型局部会覆盖全局==
 
-### ConvertService
+### ConversionService
+
+spring 3.0之后，可以使用ConversionService方式
+1、xml配置ConversionService，示例：
+
+
+```
+<bean id="conversionService"
+            class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="org.example.MyConverter"/>
+            </set>
+        </property>
+        <property name="formatters">
+            <set>
+                <bean class="org.example.MyFormatter"/>
+                <bean class="org.example.MyAnnotationFormatterFactory"/>
+            </set>
+        </property>
+        <property name="formatterRegistrars">
+            <set>
+                <bean class="org.example.MyFormatterRegistrar"/>
+            </set>
+        </property>
+    </bean>
+
+```
 
