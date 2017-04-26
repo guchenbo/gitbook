@@ -16,7 +16,8 @@ Controller级别的自定义属性编辑器，示例：
 
 ```
 @InitBinder
- public void initBinder(PropertyEditorRegistry registry) {     registry.registerCustomEditor(Date.class, new DemoDateEditor(new SimpleDateFormat("yyyy-HH-dd"), true)); 
+ public void initBinder(PropertyEditorRegistry registry) { 
+    registry.registerCustomEditor(Date.class, new DemoDateEditor(new SimpleDateFormat("yyyy-HH-dd"), true)); 
 }
 ```
 2、xml配置WebBindingInitializer
@@ -24,7 +25,21 @@ Controller级别的自定义属性编辑器，示例：
 
 
 ```
-<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">       <property name="messageConverters">           <list>               <ref bean="stringHttpMessageConverter"/>               <ref bean="jacksonMessageConverter"/>           </list>       </property>       <property name="webBindingInitializer">           <bean                   class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">               <property name="propertyEditorRegistrars">                   <array>                       <bean                               class="com.duotin.controller.handler.CustomPropertyEditorRegistrar"/>                   </array>               </property>           </bean>       </property> <property name="customArgumentResolvers"> 	<list> 		<bean class="com.duotin.controller.handler.NewCustomArgumentResolver"/> 	</list> </property>   </bean>
+<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+
+        <property name="webBindingInitializer">
+            <bean
+                    class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+                <property name="propertyEditorRegistrars">
+                    <array>
+                        <bean
+                                class="com.duotin.controller.handler.CustomPropertyEditorRegistrar"/>
+                    </array>
+                </property>
+            </bean>
+        </property>
+		
+    </bean>
 
 ```
 
