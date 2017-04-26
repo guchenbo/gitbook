@@ -18,6 +18,7 @@
         * [Spring MVC之DispatcherServlet处理请求的过程](spring/mvc/DispatcherServlet-handler.md)
         * [Spring MVC之配置顺序](spring/mvc/config-order.md)
         * [Srping MVC之参数类型转换方式](spring/mvc/convert.md)
+        * [Sring MVC之HttpMessageConverter](spring/mvc/HttpMessageConverter.md)
     * [定时任务](spring/Spring中的定时任务.md)
 * [tomcat](tomcat/README.md)
     * [配置相关信息](tomcat/config.md)
