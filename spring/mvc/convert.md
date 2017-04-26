@@ -1,4 +1,4 @@
-# Srping MVC之类型转换方式
+# Srping MVC之参数类型转换方式
 spring mvc中类型转换的方式有：PropertyEditor、ConversionService
 ==注：如果有自定义PropertyEditor，会优先使用PropertyEditor，否则就用默认的ConversionService==
 ### PropertyEditor
