@@ -16,7 +16,7 @@
     * [MVC](spring/mvc/README.md)
         * [Spring MVC重要的接口和类解析](spring/mvc/spring-mvc-class.md)
         * [Spring MVC之DispatcherServlet处理请求的过程](spring/mvc/DispatcherServlet-handler.md)
-        * [Spring MVC之参数处理过程](spring/mvc/argument-resolver.md)
+        * [Spring MVC之参数解析过程](spring/mvc/argument-resolver.md)
         * [Spring MVC之返回值处理过程](spring/mvc/return-value-handler.md)
         * [Spring MVC之配置顺序](spring/mvc/config-order.md)
         * [Srping MVC之参数类型转换方式](spring/mvc/convert.md)
