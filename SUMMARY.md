@@ -8,6 +8,7 @@
     * [集合](java/collection/README.md)
     * [线程](java/thread/README.md)
         * [Java内存模型JMM](java/thread/jmm.md)
+        * [线程的wait()、notify()和notifyAll()](java/thread/wait-notify.md)
     * [JVM](java/jvm/README.md)
         * [自动动手写Java虚拟机](java/jvm/jvm-go.md)
 * [spring](spring/README.md)
