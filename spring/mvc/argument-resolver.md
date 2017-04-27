@@ -12,12 +12,13 @@ spring 使用HttpMethodArgumentRevolver接口解析参数，spring会加入默�
 HttpMethodArgumentRevolver声明了两个方法：
 
 
+
 ```
 boolean supportsParameter(MethodParameter parameter);
 
 Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, 		NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception; 
-
 ```
+
 * supportsParameter：是否支持
 * resolveArgument：解析参数
 
