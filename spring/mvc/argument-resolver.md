@@ -50,12 +50,18 @@ ExpressionValueMethodArgumentResolver|
 ------- | -------
 ServletRequestMethodArgumentResolver|
 ServletResponseMethodArgumentResolver|
-|
-|
-##### 3、其他
+HttpEntityMethodProcessor|
+RedirectAttributesMethodArgumentResolver|
+ModelMethodProcessor|
+MapMethodProcessor|
+ErrorsMethodArgumentResolver|
+SessionStatusMethodArgumentResolver|
+UriComponentsBuilderMethodArgumentResolver|
 
 
 #### RequestParamMethodArgumentResolver
+spring会加入两个RequestParamMethodArgumentResolver，一个支持注解，一个支持简单类型
+
 #### 支持的类型
 * @RequestParam
 * BeanUtils#isSimpleProperty()
@@ -63,7 +69,24 @@ ServletResponseMethodArgumentResolver|
 
 简单的说，就是如果参数使用了注解@RequestParam，或者是简单类型的，就会使用这个解析器
 
-解析过程
+#### 解析过程
+
+1. 解析参数为Object类型
+2. 使用spring的类型转换系统
 
 #### ServletModelAttributeMethodProcessor
+spring会加入两个RequestParamMethodArgumentResolver，一个支持注解，一个支持用户自定义的类型，如`Person`
+
+#### 支持的类型
+* @ModelAttribute
+* !BeanUtils#isSimpleProperty()
+
+简单的说，就是如果参数使用了注解@ModelAttribute，或者是不是简单类型的，就会使用这个解析器
+
+#### 解析过程
+
+1. 反射实例化参数
+2. 分别设置参数的属性
+	1. 使用spring的类型转换系统
+
 
