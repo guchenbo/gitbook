@@ -22,6 +22,7 @@
         * [Spring MVC之参数类型转换方式](spring/mvc/convert.md)
         * [Spring MVC之HttpMessageConverter](spring/mvc/HttpMessageConverter.md)
         * [Spring MVC之视图解析过程](spring/mvc/view-resolver.md)
+        * [Spring MVC之校验机制](spring/mvc/validator.md)
     * [定时任务](spring/Spring中的定时任务.md)
 * [tomcat](tomcat/README.md)
     * [配置相关信息](tomcat/config.md)
