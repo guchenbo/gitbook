@@ -59,5 +59,5 @@
         * [Struts2之convention plugin](framework/struts/convention-plugin.md)
 * [消息中间件](mq/README.md)
     * [kafka](mq/kafka/README.md)
-        * [入门](mq/kafaka/introduce.md)
+        * [入门](mq/kafka/introduce.md)
 
